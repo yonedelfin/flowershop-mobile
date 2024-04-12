@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>will you be my girlfriend?</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="main">
+        <div class="picture-container">
+            <img src="elgatoflower.jpg" alt="please"><br>
+            <caption>flowers for u :D</caption>
+        </div>
+        <div class="button-container">
+            <button id="yes">yes</button>
+            <button id="no">no</button>
+        </div>
+    </div>
+</body>
+
+<script>
+    // Function to handle the click event on the buttons
+    document.addEventListener("DOMContentLoaded", function() {
+        var yesButton = document.getElementById("yes");
+        var noButton = document.getElementById("no");
+    
+        // Array of random messages
+        var randomMessages = [
+            "are u sure :(",
+            "el gato will be sad",
+            "[umiyak]",
+            "cge ok lng cno b nmn aq",
+            "i can wait :D",
+            "cge n isa lng oh damot nmn"
+        ];
+
+        yesButton.addEventListener("click", function() {
+            window.location.href = "yespage.html"; // Open a new page when "yes" button is clicked
+    });
+    
+        noButton.addEventListener("click", function() {
+            var randomIndex = Math.floor(Math.random() * randomMessages.length); // Generate a random index
+            var randomMessage = randomMessages[randomIndex]; // Select a random message
+            alert(randomMessage); // Show the random message when "no" button is clicked
+        });
+    });
+    </script>
+</html>

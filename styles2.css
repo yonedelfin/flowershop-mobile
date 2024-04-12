@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Prata&display=swap');
+
+body {
+    font-family: "Prata", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    background-color: #F0F0F0;
+    overflow-x: hidden; /* Disable horizontal overflow */
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.picture-container {
+    margin-bottom: 20px;
+}
+
+.picture-container img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    appearance: none;
+    background-color: #FFFFFF;
+    border-radius: 40em;
+    border-style: none;
+    box-shadow: #ADCFFF 0 -12px 6px inset;
+    color: #660066;
+    cursor: pointer;
+    font-family: "Prata", serif;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: -.24px;
+    outline: none;
+    padding: 1rem 1.3rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+button:hover {
+    background-color: #E1A9F6;
+    box-shadow: #C6C7FF 0 -6px 8px inset;
+    transform: scale(1.125);
+}
+
+button:active {
+    transform: scale(1.025);
+}
+
+@media (min-width: 768px) {
+    .main {
+        max-width: 600px; /* Limit width for larger screens */
+    }
+}

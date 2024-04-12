@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Prata&display=swap');
+
+body {
+    font-family: "Prata", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    background-color: #F0F0F0;
+    overflow-x: hidden; /* Disable horizontal overflow */
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh; /* Use viewport height to ensure full screen */
+    margin: 0;
+    padding: 20px;
+}
+
+#greeting {
+    margin-top: 20px;
+}
+
+#flower-container {
+    width: 80%; /* Adjusted width for responsiveness */
+    max-width: 300px; /* Limit width for larger screens */
+    height: auto; /* Adjust height automatically */
+    margin: 50px auto; /* Adjusted margin for better centering */
+    border: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#flower-container img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease;
+}
+
+#flower-container:hover #flower-img {
+    transform: scale(0.9); /* Scale down to 90% on hover */
+}
+
+/* Optional: Adjustments for smaller screens */
+@media only screen and (max-width: 600px) {
+    #flower-container {
+        width: 90%; /* Adjust width for smaller screens */
+        margin: 20px auto; /* Adjust margin for smaller screens */
+    }
+}
